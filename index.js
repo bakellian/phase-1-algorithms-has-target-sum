@@ -1,5 +1,16 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+//   iterate through each number in the array
+for (let i = 0; i < array.length; i++) {
+  //   for the current number identify a complimentary number that will add up to the targer. (comp number === target - current number)
+  const complimentary = target - array[i]
+  //iterate throug the rest of the array
+  for (let j = i + 1; j < array.length; j++) {
+    //check if any number is our compliment
+    if (array[j] === complimentary) return true
+  }
+}
+//if we reach the end of the array return false 
+return false;
 }
 
 /* 
@@ -7,8 +18,13 @@ function hasTargetSum(array, target) {
 */
 
 /* 
-  Add your pseudocode here
-*/
+hasTargetSum([3, 8, 12, 4, 11, 7], 10)
+iterate through each number in the array
+  for the current number identify a complimentary number that will add up to the targer. (comp number === target - current number)
+    iterare throug the rest of the array and check is any number is our compliment 
+    if yes return true
+
+if end of array is reached - return false 
 
 /*
   Add written explanation of your solution here
