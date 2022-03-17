@@ -1,17 +1,27 @@
+// function hasTargetSum(array, target) {
+// //   iterate through each number in the array
+// for (let i = 0; i < array.length; i++) {
+//   //   for the current number identify a complimentary number that will add up to the targer. (comp number === target - current number)
+//   const complimentary = target - array[i]
+//   //iterate throug the rest of the array
+//   for (let j = i + 1; j < array.length; j++) {
+//     //check if any number is our compliment
+//     if (array[j] === complimentary) return true
+//   }
+// }
+// //if we reach the end of the array return false 
+// return false;
+// }
+
 function hasTargetSum(array, target) {
-//   iterate through each number in the array
-for (let i = 0; i < array.length; i++) {
-  //   for the current number identify a complimentary number that will add up to the targer. (comp number === target - current number)
-  const complimentary = target - array[i]
-  //iterate throug the rest of the array
-  for (let j = i + 1; j < array.length; j++) {
-    //check if any number is our compliment
-    if (array[j] === complimentary) return true
+  for (let i = 0; i < array.length; i++) {
+    const complimentary = target - array[i]
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === complimentary) return true
+    }
   }
-}
-//if we reach the end of the array return false 
-return false;
-}
+  return false;
+  }
 
 /* 
   Write the Big O time complexity of your function here
